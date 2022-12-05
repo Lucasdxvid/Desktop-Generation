@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <NavCustom />
-      <ItemListContainer message="Esto es el ItemListContainer" />
+      <ItemListContainer />
     </>
   );
 };

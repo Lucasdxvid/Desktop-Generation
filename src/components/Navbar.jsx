@@ -1,4 +1,11 @@
-import {NavDropdown, Navbar, Nav, Form, Container, Button} from "react-bootstrap";
+import {
+  NavDropdown,
+  Navbar,
+  Nav,
+  Form,
+  Container,
+  Button,
+} from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import { FaSearch } from "react-icons/fa";
 

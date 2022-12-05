@@ -65,13 +65,33 @@ export const data = [
   },
   {
     id: 7,
-    title:
-      "Teclado gamer HyperX Alloy FPS Pro QWERTY Cherry MX Blue inglés US",
+    title: "Teclado gamer HyperX Alloy FPS Pro QWERTY Cherry MX Blue inglés US",
     stock: 23,
     price: 40300,
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239991/Desktop%20Generation/producto7_mpg1gn.png",
     description:
       "Teclado mecánico para videojuegos HyperX Alloy FPS Pro El HyperX™ Alloy FPS Pro es para el jugador FPS que desea un teclado sin tenkey (TKL) fiable y preciso que le permita aumentar su espacio del escritorio. Este teclado de 87 teclas proporciona todo lo que un jugador profesional necesita, pero sin el teclado numérico. El Alloy FPS Pro está disponible con teclas CHERRY® MX azules o rojas1 fiables y con excelente capacidad de respuesta, y su sólida estructura de acero garantiza que dispondrás de una plataforma estable durante las partes más importantes de los juegos. El diseño ultramínimo y el cable extraíble hacen que el teclado sea extremadamente portátil, pero está repleto de funciones: modo de juego, 100% anti-ghosting, N-key rollover y los efectos dinámicos y de iluminación de color rojo de HyperX para destacar el estilo de tu sistema.",
+  },
+  {
+    id: 8,
+    title:
+      "Pc Gamer Armada Completa Amd Ryzen 5 5600g 8gb 240gb Ssd + RTX 2060 6GB",
+    stock: 5,
+    price: 260000,
+    thumbnail:
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245176/Desktop%20Generation/producto8_zhqfsv.webp",
+    description:
+      "Los componentes se cambian automaticamente segun stock disponible, la fecha de este cambio se indica arriba, cualquier duda consulte, las preguntas viejas podrian no corresponder a los componentes actuales. Esta pc NO INCLUYE monitor - mouse - teclado.",
+  },
+  {
+    id: 9,
+    title: "Pasta Térmica Noctua Nt-h1 3.5g",
+    stock: 23,
+    price: 40300,
+    thumbnail:
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245443/Desktop%20Generation/producto9_u9ju5f.png",
+    description:
+      "El NT-H1 de Noctua es un famoso compuesto térmico híbrido que ha recibido más de 150 galardones y recomendaciones de sitios web y revistas internacionales especializadas. Gracias a su excelente rendimiento, su facilidad de uso y magnífica estabilidad prolongada, se ha consolidado como uno de los favoritos para los overclockers y aficionados del todo el mundo. Ya sea refrigeración mediante agua o aire, aplicaciones de CPU o GPU, sistemas de overcloking o silenciosos: El NT-H1 es una pasta excepcional con la que se garantizan unos resultados óptimos.",
   },
 ];

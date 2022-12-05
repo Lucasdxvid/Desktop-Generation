@@ -78,7 +78,7 @@ export const data = [
     title:
       "Pc Gamer Armada Completa Amd Ryzen 5 5600g 8gb 240gb Ssd + RTX 2060 6GB",
     stock: 5,
-    price: 260000,
+    price: 320000,
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245176/Desktop%20Generation/producto8_zhqfsv.webp",
     description:

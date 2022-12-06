@@ -2,14 +2,16 @@
 
 let is_ok = true;
 
-export const fetchData = (time, task) => {
+const fetchData = (time, task) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (is_ok) {
         resolve(task);
       } else {
-        reject("Error");
+        reject("Ha ocurrido un error con el fetchData");
       }
     }, time);
   });
 };
+
+export default fetchData;

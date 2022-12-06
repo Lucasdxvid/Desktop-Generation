@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Product from "./ItemList";
-import { ProductsData } from "../../utils/ProductsData";
-import { fetchData } from "../../utils/FetchData";
+import { ProductsData } from "../utils/ProductsData";
+import fetchData from "../utils/FetchData";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {

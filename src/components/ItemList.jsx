@@ -17,7 +17,7 @@ const Product = ({ id, title, price, stock, thumbnail, description }) => {
             <span className="priceTag">Precio: </span> $ {price}
           </p>
         </div>
-        <Link to="/">
+        <Link to={`/productDetail/${id}`}>
           <button type="button" className="btn productViewBtn">
             Ver Más
           </button>

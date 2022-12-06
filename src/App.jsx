@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainContent from "./components/MainContent";
+import ItemDetailContainer from "./components/ItemDetailContainer";
 import NavCustom from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/App.css";
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/category/:idCategory" element={<MainContent />} />
+          <Route path="/productDetail/:idProduct" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
     </>

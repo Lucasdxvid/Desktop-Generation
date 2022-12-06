@@ -11,7 +11,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     fetchData(2000, ProductsData.filter(item => item.categoryId == idCategory))
-      .then((response) => setDatos(ProductsData))
+      .then((response) => setDatos(response))
       .catch((err) => console.log(err));
   }, [idCategory]); // El array vacio se comporta como un component didMount pero necesitamos que comporte como didUpdate por lo que colocamos idCategory como argumento del useEffect provocando que cada que mande otro ID se ejecute el mismo de nuevo
 

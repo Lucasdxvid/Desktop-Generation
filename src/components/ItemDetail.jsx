@@ -1,30 +1,24 @@
 import { Link } from "react-router-dom";
 
-const ProductDetail = ({ id, title, price, stock, thumbnail, description }) => {
+const ProductDetail = ({ item }) => {
   return (
     <>
       <article className="productCard">
         <img
-          src={thumbnail}
+          src={item.thumbnail}
           alt="Imagen del producto"
           className="productImage"
         />
-        <p className="productStock">stock: {stock}</p>
+        <p className="productStock">stock: {item.stock}</p>
         <div className="productContent">
-          <h3 className="productTitle">{title}</h3>
+          <h3 className="productTitle">{item.title}</h3>
           <p className="productPrice">
-            <span className="priceTag">Precio: </span> $ {price}
+            <span className="priceTag">Precio: </span> $ {item.price}
           </p>
         </div>
-        <Link to={`/productDetail/${id}`}>
-          <button type="button" className="btn productViewBtn">
-            Ver Más
-          </button>
-        </Link>
       </article>
     </>
   );
 };
 
 export default ProductDetail;
-

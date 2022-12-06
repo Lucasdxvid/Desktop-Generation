@@ -5,6 +5,7 @@ import { data } from "./data";
 import { fetchData } from "./FetchData";
 
 const Products = () => {
+  //Aqui tenemos el estado datos del componente "Products" que lo seteamos con el resultado de la promesa ("el array de productos llamado data")
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {

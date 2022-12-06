@@ -1,9 +1,8 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import Product from "./ItemList";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { ProductsData } from "../utils/ProductsData";
 import fetchData from "../utils/FetchData";
-import { useParams } from "react-router-dom";
+import Product from "./ItemList";
 
 const ItemListContainer = () => {
   //Aqui tenemos el estado datos del componente "ProductsData" que lo seteamos con el resultado de la promesa ("el array de productos llamado data")

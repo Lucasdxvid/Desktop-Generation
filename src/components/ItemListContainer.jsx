@@ -10,10 +10,15 @@ const ItemListContainer = () => {
   const { idCategory } = useParams(); // Este hook de react router nos dice cual es ese "id" que nos envian mediante la url
 
   useEffect(() => {
+    if(idCategory) {
     fetchData(2000, ProductsData.filter(item => item.categoryId == idCategory)) // Filter nos permitira sacar los elementos que no cumplan con la condicion
       .then((response) => setDatos(response))
       .catch((err) => console.log(err));
-  }, [idCategory]); // El array vacio se comporta como un component didMount pero necesitamos que comporte como didUpdate por lo que colocamos idCategory como argumento del useEffect provocando que cada que mande otro ID se ejecute el mismo de nuevo
+  } else { //? Es necesario un if else ya que al estar en la ruta raiz, "idCategory" posee el valor undefined, es decir que cuando recibo IdCategory hago el filtro, cuando no recibo todos
+    fetchData(2000, ProductsData)
+    .then((response) => setDatos(response))
+    .catch((err) => console.log(err));
+  }}, [idCategory]); // El array vacio se comporta como un component didMount pero necesitamos que comporte como didUpdate por lo que colocamos idCategory como argumento del useEffect provocando que cada que mande otro ID se ejecute el mismo de nuevo
 
   return (
     <>

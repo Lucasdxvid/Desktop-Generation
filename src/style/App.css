@@ -7,6 +7,10 @@
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header - Nav */
 
 .navbar,
@@ -15,13 +19,15 @@
   justify-content: space-between;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:focus {
   background: rgb(36, 36, 36);
 }
 
 .navText,
 .nav-link {
-  color: white;
+  color: white !important;
 }
 
 .navText:hover,
@@ -39,9 +45,10 @@
 
 .navLogo {
   background-image: url(../assets/logo/navLogo.svg);
-  width: 14em;
-  height: 2em;
   background-repeat: no-repeat;
+  width: 17em;
+  height: 2.4em;
+  margin-right: 1%;
 }
 
 .navLogo:hover {

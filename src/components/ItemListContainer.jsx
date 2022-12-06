@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import Product from "./ItemList";
-import { data } from "../../utils/data";
+import { ProductsData } from "../../utils/ProductsData";
 import { fetchData } from "../../utils/FetchData";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
-  //Aqui tenemos el estado datos del componente "Products" que lo seteamos con el resultado de la promesa ("el array de productos llamado data")
+  //Aqui tenemos el estado datos del componente "ProductsData" que lo seteamos con el resultado de la promesa ("el array de productos llamado data")
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams(); // Este hook de react router nos dice cual es ese "id" que nos envian mediante la url
 
   useEffect(() => {
-    fetchData(2000, data.filter(item => item.categoryId == idCategory))
-      .then((response) => setDatos(data))
+    fetchData(2000, ProductsData.filter(item => item.categoryId == idCategory))
+      .then((response) => setDatos(ProductsData))
       .catch((err) => console.log(err));
   }, [idCategory]); // El array vacio se comporta como un component didMount pero necesitamos que comporte como didUpdate por lo que colocamos idCategory como argumento del useEffect provocando que cada que mande otro ID se ejecute el mismo de nuevo
 

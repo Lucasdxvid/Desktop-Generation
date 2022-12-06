@@ -2,7 +2,7 @@
 //Simulamos que la misma viene de una base de datos
 //Cada objeto representa a un producto  los cuales se encuentran enlistado en un array
 
-export const data = [
+export const ProductsData = [
   {
     id: 1,
     categoryId: 2,

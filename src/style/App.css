@@ -213,3 +213,8 @@ body {
 .productViewBtn:active {
   background-color: rgba(97, 97, 97, 0.466) !important;
 }
+
+.productViewBtn:hover,
+.productViewBtn:focus {
+  color: white !important;
+}

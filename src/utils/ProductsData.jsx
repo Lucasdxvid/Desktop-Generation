@@ -9,6 +9,8 @@ export const ProductsData = [
     title: "Mouse Logitech G903 HERO LIGHTSPEED Inalambrico",
     stock: 5,
     price: 21500,
+    priceList: 26875,
+    warranty: "180 días",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto1_pyihgp.png",
     description:
@@ -20,6 +22,8 @@ export const ProductsData = [
     title: "Memoria Ram Corsair Vengeance Rgb Pro Black 8gb 3200 Mhz Ddr4",
     stock: 8,
     price: 15900,
+    priceList: 19875,
+    warranty: "3 años",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto2_xd54a8.webp",
     description:
@@ -31,9 +35,12 @@ export const ProductsData = [
     title: "Placa de video  ASUS NVIDIA GeForce RTX 3060 TI DUAL OC O8G",
     stock: 6,
     price: 176000,
+    priceList: 220000,
+    warranty: "3 años",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto3_xmq5cr.png",
-    description: "este es el componente mas bueno",
+    description:
+      "Provista de la experiencia NVIDIA Ampere en estado puro, la gráfica ASUS Dual GeForce RTX 3060 TI ofrece una combinación única de simplicidad y rendimiento. Equipada con tecnologías de refrigeración presentes en las gráficas de alta gama, la Dual prioriza el rendimiento por encima de la estética y es una opción ideal para montar equipos bien equilibrados.",
   },
   {
     id: 4,
@@ -41,6 +48,8 @@ export const ProductsData = [
     title: "Mouse pad Marvo Gaming G41 Extended",
     stock: 16,
     price: 1700,
+    priceList: 2125,
+    warranty: "30 días",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239276/Desktop%20Generation/producto4_hrebgi.png",
     description:
@@ -52,6 +61,8 @@ export const ProductsData = [
     title: "Auricular Corsair HS80 7.1 RGB Carbon",
     stock: 8,
     price: 36300,
+    priceList: 45375,
+    warranty: "1 año",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239276/Desktop%20Generation/producto5_tyj1x7.png",
     description:
@@ -64,6 +75,8 @@ export const ProductsData = [
       "Auriculares gaming Cloud Orbit S con audio 3D y seguimiento de cabeza",
     stock: 7,
     price: 45999,
+    priceList: 57499,
+    warranty: "1 año",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239991/Desktop%20Generation/producto6_a8kehm.png",
     description:
@@ -75,6 +88,8 @@ export const ProductsData = [
     title: "Teclado gamer HyperX Alloy FPS Pro QWERTY Cherry MX Blue inglés US",
     stock: 23,
     price: 40300,
+    priceList: 50375,
+    warranty: "180 días",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239991/Desktop%20Generation/producto7_mpg1gn.png",
     description:
@@ -87,6 +102,8 @@ export const ProductsData = [
       "Pc Gamer Armada Completa Amd Ryzen 5 5600g 8gb 240gb Ssd + RTX 2060 6GB",
     stock: 5,
     price: 320000,
+    priceList: 400000,
+    warranty: "3 años",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245176/Desktop%20Generation/producto8_zhqfsv.webp",
     description:
@@ -98,6 +115,8 @@ export const ProductsData = [
     title: "Pasta Térmica Noctua Nt-h1 3.5g",
     stock: 23,
     price: 4400,
+    priceList: 5500,
+    warranty: "30 días",
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245443/Desktop%20Generation/producto9_u9ju5f.png",
     description:

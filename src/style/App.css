@@ -218,3 +218,95 @@ body {
 .productViewBtn:focus {
   color: white !important;
 }
+
+/* Products - Detail Section */
+
+.detailMainContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.detailCard {
+  margin-top: 2%;
+  background-color: #1a1919;
+  border: solid #24232352 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 5% 5% 0% 5%;
+}
+
+.detailTitle {
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
+  color: white;
+  text-shadow: -1px 0 #000, 0 3px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.detailContent {
+  display: flex;
+  margin-top: 1%;
+  border-top: #00fd2a 3px solid;
+  margin-bottom: -1%;
+}
+
+.detailImage {
+  width: 60%;
+  display: flex;
+  border-right: #31303083 3px solid;
+  padding: 5%;
+}
+
+.detailAvailability {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 1%;
+  margin-top: 4%;
+}
+
+.detailTextDiv {
+  border-top: #24232352 4px solid;
+}
+
+.detailTextDiv:first-child {
+  border-top: none;
+}
+
+.detailContentText {
+  color: white;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  padding-top: 1em;
+  font-size: 1.1em;
+}
+
+.detailPriceSimbol {
+  color: rgb(245, 65, 65);
+}
+
+.detailContentSpan {
+  color: #00fd2a;
+  font-weight: 800;
+}
+
+.detailContentTextShip {
+  font-size: 1em;
+  color: rgb(207, 207, 207);
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  margin-top: -4%;
+}
+
+.detailDescriptionDiv {
+  border-top: #00fd2a 3px solid;
+  padding-top: 5%;
+}
+
+.detailDescriptionTitle {
+  color: white;
+  text-shadow: -1px 0 #000, 0 3px #000, 1px 0 #000, 0 -1px #000;
+  font-weight: 900;
+  font-size: 1.5em;
+}

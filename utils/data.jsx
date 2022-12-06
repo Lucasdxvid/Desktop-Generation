@@ -5,6 +5,7 @@
 export const data = [
   {
     id: 1,
+    categoryId: 2,
     title: "Mouse Logitech G903 HERO LIGHTSPEED Inalambrico",
     stock: 5,
     price: 21500,
@@ -15,6 +16,7 @@ export const data = [
   },
   {
     id: 2,
+    categoryId: 1,
     title: "Memoria Ram Corsair Vengeance Rgb Pro Black 8gb 3200 Mhz Ddr4",
     stock: 8,
     price: 15900,
@@ -25,6 +27,7 @@ export const data = [
   },
   {
     id: 3,
+    categoryId: 1,
     title: "Placa de video  ASUS NVIDIA GeForce RTX 3060 TI DUAL OC O8G",
     stock: 6,
     price: 176000,
@@ -34,6 +37,7 @@ export const data = [
   },
   {
     id: 4,
+    categoryId: 2,
     title: "Mouse pad Marvo Gaming G41 Extended",
     stock: 16,
     price: 1700,
@@ -44,6 +48,7 @@ export const data = [
   },
   {
     id: 5,
+    categoryId: 2,
     title: "Auricular Corsair HS80 7.1 RGB Carbon",
     stock: 8,
     price: 36300,
@@ -54,6 +59,7 @@ export const data = [
   },
   {
     id: 6,
+    categoryId: 2,
     title:
       "Auriculares gaming Cloud Orbit S con audio 3D y seguimiento de cabeza",
     stock: 7,
@@ -65,6 +71,7 @@ export const data = [
   },
   {
     id: 7,
+    categoryId: 2,
     title: "Teclado gamer HyperX Alloy FPS Pro QWERTY Cherry MX Blue inglés US",
     stock: 23,
     price: 40300,
@@ -75,6 +82,7 @@ export const data = [
   },
   {
     id: 8,
+    categoryId: 3,
     title:
       "Pc Gamer Armada Completa Amd Ryzen 5 5600g 8gb 240gb Ssd + RTX 2060 6GB",
     stock: 5,
@@ -86,6 +94,7 @@ export const data = [
   },
   {
     id: 9,
+    categoryId: 4,
     title: "Pasta Térmica Noctua Nt-h1 3.5g",
     stock: 23,
     price: 4400,

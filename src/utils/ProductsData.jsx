@@ -12,7 +12,7 @@ export const ProductsData = [
     priceList: 26875,
     warranty: "180 días",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto1_pyihgp.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto1_gdkrgo.png",
     description:
       "El mouse para juegos inalámbrico Logitech G903 cuenta con los últimos sensores ópticos y tecnología Ligthspeed para una respuesta de 1 ms. Sistema de carga Powerplay compatible.",
   },
@@ -25,7 +25,7 @@ export const ProductsData = [
     priceList: 19875,
     warranty: "3 años",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto2_xd54a8.webp",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359477/Desktop%20Generation/resized/producto2_vfejq6.png",
     description:
       "La memoria con overclocking DDR4 CORSAIR VENGEANCE RGB PRO Series ilumina el PC con un efecto hipnótico gracias a la iluminación RGB dinámica multizona, además de ofrecer las mejores características de las DDR4 en cuanto a rendimiento.",
   },
@@ -38,7 +38,7 @@ export const ProductsData = [
     priceList: 220000,
     warranty: "3 años",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670238351/Desktop%20Generation/producto3_xmq5cr.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto3_nontwc.png",
     description:
       "Provista de la experiencia NVIDIA Ampere en estado puro, la gráfica ASUS Dual GeForce RTX 3060 TI ofrece una combinación única de simplicidad y rendimiento. Equipada con tecnologías de refrigeración presentes en las gráficas de alta gama, la Dual prioriza el rendimiento por encima de la estética y es una opción ideal para montar equipos bien equilibrados.",
   },
@@ -51,7 +51,7 @@ export const ProductsData = [
     priceList: 2125,
     warranty: "30 días",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239276/Desktop%20Generation/producto4_hrebgi.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359046/Desktop%20Generation/resized/producto4_qnxrqn.png",
     description:
       "Idealmente diseñado para configuraciones de mouse con baja sensibilidad. Este pad fue optimizado para mejorar la precisión de todos los sensores en el mercado. El control y el comfort fueron enaltecidos con materiales de superior calidad. La durabilidad del mismo fue mejorada al utilizar nuevas tecnologías en la fabricación del pad.",
   },
@@ -64,7 +64,7 @@ export const ProductsData = [
     priceList: 45375,
     warranty: "1 año",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239276/Desktop%20Generation/producto5_tyj1x7.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto5_ggml0x.png",
     description:
       "Los auriculares para juegos CORSAIR HS80 RGB WIRELESS se conectan mediante la tecnología hiperrápida SLIPSTREAM WIRELESS y ofrecen un sonido increíblemente detallado a través de los transductores de audio de neodimio de 50 mm, con ajuste personalizado y Dolby Atmos inmersivo.",
   },
@@ -78,7 +78,7 @@ export const ProductsData = [
     priceList: 57499,
     warranty: "1 año",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239991/Desktop%20Generation/producto6_a8kehm.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto6_sxd0ph.png",
     description:
       "HyperX Cloud Orbit S construye un mundo de sonidos a su alrededor con los transductores magnéticos planos de Audeze™, el seguimiento de cabeza de Waves Nx™ y la tecnología de audio 3D. Obtenga una auténtica inmersión, ya que la tecnología de seguimiento registra la posición de su cabeza hasta casi 1000 veces por segundo para estabilizar el entorno sonoro, ubicándole en el centro de su propia atmósfera auditiva tridimensional.",
   },
@@ -91,7 +91,7 @@ export const ProductsData = [
     priceList: 50375,
     warranty: "180 días",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670239991/Desktop%20Generation/producto7_mpg1gn.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto7_mdim2q.png",
     description:
       "Teclado mecánico para videojuegos HyperX Alloy FPS Pro El HyperX™ Alloy FPS Pro es para el jugador FPS que desea un teclado sin tenkey (TKL) fiable y preciso que le permita aumentar su espacio del escritorio. Este teclado de 87 teclas proporciona todo lo que un jugador profesional necesita, pero sin el teclado numérico. El Alloy FPS Pro está disponible con teclas CHERRY® MX azules o rojas1 fiables y con excelente capacidad de respuesta, y su sólida estructura de acero garantiza que dispondrás de una plataforma estable durante las partes más importantes de los juegos. El diseño ultramínimo y el cable extraíble hacen que el teclado sea extremadamente portátil, pero está repleto de funciones: modo de juego, 100% anti-ghosting, N-key rollover y los efectos dinámicos y de iluminación de color rojo de HyperX para destacar el estilo de tu sistema.",
   },
@@ -118,8 +118,21 @@ export const ProductsData = [
     priceList: 5500,
     warranty: "30 días",
     thumbnail:
-      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245443/Desktop%20Generation/producto9_u9ju5f.png",
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359045/Desktop%20Generation/resized/producto9_ha17sh.png",
     description:
       "El NT-H1 de Noctua es un famoso compuesto térmico híbrido que ha recibido más de 150 galardones y recomendaciones de sitios web y revistas internacionales especializadas. Gracias a su excelente rendimiento, su facilidad de uso y magnífica estabilidad prolongada, se ha consolidado como uno de los favoritos para los overclockers y aficionados del todo el mundo. Ya sea refrigeración mediante agua o aire, aplicaciones de CPU o GPU, sistemas de overcloking o silenciosos: El NT-H1 es una pasta excepcional con la que se garantizan unos resultados óptimos.",
+  },
+  {
+    id: 10,
+    categoryId: 2,
+    title: "Webcam streaming Hitman GW800 - Redragon",
+    stock: 14,
+    price: 10490,
+    priceList: 13115,
+    warranty: "180 días",
+    thumbnail:
+      "https://res.cloudinary.com/drsheqkfv/image/upload/v1670359724/Desktop%20Generation/resized/producto10_utq9sl.png",
+    description:
+      "La Hitman es una webcam diseñada específicamente para el streaming, con características que se adaptan a las necesidades precisas de creadores de contenido e influencers. Es capaz de transmitir en vivo en Full HD 1080p a 30 fps, y sus sistemas de AF y AE facilitan mucho el trabajo en transmisiones de una sola persona. Cuenta además con captación de audio estéreo y está provista de un brazo articulado con movimiento 360°.",
   },
 ];

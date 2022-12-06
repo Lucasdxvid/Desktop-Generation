@@ -1,3 +1,5 @@
+import InnerImageZoom from "react-inner-image-zoom";
+
 const ProductDetail = ({ item }) => {
   return (
     <>
@@ -5,9 +7,9 @@ const ProductDetail = ({ item }) => {
         <article className="detailCard">
           <h2 className="detailTitle">{item.title}</h2>
           <div className="detailContent">
-            <img
-              src={item.thumbnail}
-              alt="Imagen del producto"
+            <InnerImageZoom
+              src={`${item.thumbnail}`}
+              zoomSrc={`${item.thumbnail}`}
               className="detailImage"
             />
             <div className="detailAvailability">
@@ -32,7 +34,8 @@ const ProductDetail = ({ item }) => {
               </div>
               <div className="detailTextDiv">
                 <p className="detailContentText">
-                  <span className="detailContentSpan">Garantía:</span> {item.warranty}
+                  <span className="detailContentSpan">Garantía:</span>{" "}
+                  {item.warranty}
                 </p>
               </div>
               <div className="detailTextDiv">
@@ -45,7 +48,8 @@ const ProductDetail = ({ item }) => {
               </div>
               <div className="detailDescriptionDiv">
                 <h3 className="detailDescriptionTitle">
-                  Descripción del <span className="detailPriceSimbol"> Producto</span>
+                  Descripción del{" "}
+                  <span className="detailPriceSimbol"> Producto</span>
                 </h3>
                 <p className="detailContentText">{item.description}</p>
               </div>

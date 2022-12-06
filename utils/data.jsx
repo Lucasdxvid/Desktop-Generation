@@ -1,6 +1,6 @@
 //! Hacemos una exportacion "nombrada" por lo que tenemos que importarlo con corchetes
 //Simulamos que la misma viene de una base de datos
-//Cada objeto representa a un producto
+//Cada objeto representa a un producto  los cuales se encuentran enlistado en un array
 
 export const data = [
   {

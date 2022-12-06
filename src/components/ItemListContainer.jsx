@@ -1,6 +1,6 @@
 import Products from "../../utils/products";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
   return (
     <>
       <main className="mainContainer">

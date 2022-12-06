@@ -24,7 +24,3 @@ const Product = ({ id, title, price, stock, thumbnail, description }) => {
 };
 
 export default Product;
-
-{
-  /* <p className="productDesc">{description}</p> */
-}

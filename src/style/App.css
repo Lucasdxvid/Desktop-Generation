@@ -110,6 +110,10 @@
 
 /* Main - Product Section */
 
+body {
+  background-color: #313030;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@ const Products = () => {
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
-    fetchData(0, data)
+    fetchData(2000, data)
       .then((response) => setDatos(data))
       .catch((err) => console.log(err));
   }, []);

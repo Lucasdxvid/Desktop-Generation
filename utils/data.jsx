@@ -88,7 +88,7 @@ export const data = [
     id: 9,
     title: "Pasta Térmica Noctua Nt-h1 3.5g",
     stock: 23,
-    price: 40300,
+    price: 4400,
     thumbnail:
       "https://res.cloudinary.com/drsheqkfv/image/upload/v1670245443/Desktop%20Generation/producto9_u9ju5f.png",
     description:

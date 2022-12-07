@@ -14,6 +14,8 @@ FRAMEWORKS/LIBRERIAS/OTROS:
 
 :small_blue_diamond: Bootstrap React
 
+:small_blue_diamond: React Inner Image Zoom
+
 En progreso...
 
 ![gifPrueba](https://user-images.githubusercontent.com/107517262/206062954-bba5db1b-8efb-443c-98ce-361dc3fcb33b.gif)

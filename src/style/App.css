@@ -310,3 +310,8 @@ body {
   font-weight: 900;
   font-size: 1.5em;
 }
+
+.shopIcon {
+  height: 2em;
+  width: 2em;
+}

@@ -14,7 +14,7 @@ FRAMEWORKS/LIBRERIAS/OTROS:
 
 :small_blue_diamond: Bootstrap React
 
-:small_blue_diamond: React Inner Image Zoom
+:small_orange_diamond: React Inner Image Zoom
 
 En progreso...
 

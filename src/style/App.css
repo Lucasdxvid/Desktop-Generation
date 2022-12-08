@@ -3,8 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  box-shadow: none;
-  border: none;
 }
 
 a {
@@ -17,6 +15,7 @@ a {
 .dropdown-menu {
   background-color: rgb(26, 25, 25);
   justify-content: space-between;
+  border-bottom: 2px solid #00fd2a;
 }
 
 .dropdown-item:hover,
@@ -118,7 +117,8 @@ a {
 /* Main - Product Section */
 
 body {
-  background-color: #313030;
+  background: #313030;
+  background: radial-gradient(circle, #084e14 5%, #313030 80%);
 }
 
 .mainContainer {
@@ -127,7 +127,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #313030;
+  margin-top: 100;
 }
 
 .productSection {

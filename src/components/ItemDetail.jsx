@@ -6,8 +6,13 @@ import {
   FcNumericalSorting12,
   FcCurrencyExchange,
 } from "react-icons/fc";
+import ItemCount from "./ItemCount";
 
 const ProductDetail = ({ item }) => {
+  const onAdd = (qty) => {
+    alert("Añadiste un total de " + qty + " productos.");
+  };
+
   return (
     <>
       <section className="detailMainContainer">
@@ -65,6 +70,7 @@ const ProductDetail = ({ item }) => {
                 </h3>
                 <p className="detailContentText">{item.description}</p>
               </div>
+              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
             </div>
           </div>
         </article>

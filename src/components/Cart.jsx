@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
 const Cart = () => {
-  const { cartList, deleteProduct } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
+  const { cartList, deleteProduct, removeList } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
 
   return (
     <>
@@ -17,6 +17,7 @@ const Cart = () => {
               <li key={item.id}>
                 {item.title} - cantidad: {item.qty}
                 <button onClick={() => deleteProduct(item.id)}>Eliminar</button>
+                <button onClick={() => removeList(item)}>Todo</button>
               </li>
             ))
           )}

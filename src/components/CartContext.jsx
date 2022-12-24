@@ -24,8 +24,14 @@ const CartContextProvider = ({ children }) => {
     setCartList(withoutProduct);
   };
 
+  const removeList = () => {
+    setCartList([]);
+  };
+
   return (
-    <CartContext.Provider value={{ cartList, addToCart, deleteProduct }}>
+    <CartContext.Provider
+      value={{ cartList, addToCart, deleteProduct, removeList }}
+    >
       {children}
     </CartContext.Provider>
   );

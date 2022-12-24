@@ -19,7 +19,7 @@ const ProductDetail = ({ item }) => {
     alert("Añadiste un total de " + qty + " productos.");
     setItemCount(qty);
     // Aqui ejecutamos la funcion global anteriormente creada
-    addToCart(item);
+    addToCart(item, qty);
   };
 
   return (

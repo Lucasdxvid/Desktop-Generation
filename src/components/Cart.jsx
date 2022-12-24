@@ -15,7 +15,7 @@ const Cart = () => {
           ) : (
             cartList.map((item) => (
               <li key={item.id}>
-                {item.title}
+                {item.title} - cantidad: {item.qty}
                 <button onClick={() => deleteProduct(item.id)}>Eliminar</button>
               </li>
             ))

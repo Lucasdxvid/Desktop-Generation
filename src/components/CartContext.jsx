@@ -7,18 +7,24 @@ const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]); // El mismo arranca siendo un estado local para luego promoverlo a un estado global (value = cartList)
 
   const addToCart = (item, qty) => {
-    setCartList([
-      ...cartList,
-      {
-        id: item.id,
-        image: item.image,
-        title: item.title,
-        price: item.price,
-        qty: qty,
-      },
-    ]); // con esto le decimos que coloque los elementos que ya tiene en carro, agregue el nuevo item y convierta eso en el nuevo estado
+    let found = cartList.find((product) => product.id === item.id);
+    if (found === undefined) {
+      setCartList([
+        ...cartList,
+        {
+          id: item.id,
+          image: item.image,
+          title: item.title,
+          price: item.price,
+          qty: qty,
+        },
+      ]);
+    } else {
+      //al encontrarlo, entonces aumentamos el qty de ese producto
+      found.qty += qty;
+      setCartList([...cartList]);
+    }
   };
-
   const deleteProduct = (id) => {
     const withoutProduct = cartList.filter((item) => item.id !== id);
     setCartList(withoutProduct);

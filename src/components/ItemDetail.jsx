@@ -9,11 +9,15 @@ import {
 import ItemCount from "./ItemCount";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProductDetail = ({ item }) => {
+  const [itemCount, setItemCount] = useState(0);
   const { addToCart } = useContext(CartContext); // se accede a la funcion global
   const onAdd = (qty) => {
     alert("Añadiste un total de " + qty + " productos.");
+    setItemCount(qty);
     // Aqui ejecutamos la funcion global anteriormente creada
     addToCart(item);
   };
@@ -75,7 +79,11 @@ const ProductDetail = ({ item }) => {
                 </h3>
                 <p className="detailContentText">{item.description}</p>
               </div>
-              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+              {
+                        itemCount === 0
+                        ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} />
+                        : <Link to='/cart' ><button className="btn productViewBtn addToCartBtn">Ver Carrito</button></Link>
+                    }
             </div>
           </div>
         </article>

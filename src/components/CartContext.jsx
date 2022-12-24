@@ -7,7 +7,7 @@ const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]); // El mismo arranca siendo un estado local para luego promoverlo a un estado global (value = cartList)
 
   const addToCart = (item) => {
-    setCartList([item]);
+    setCartList([...cartList, item]); // con esto le decimos que coloque los elementos que ya tiene en carro, agregue el nuevo item y convierta eso en el nuevo estado
   };
 
   return (

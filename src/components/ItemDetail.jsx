@@ -7,10 +7,15 @@ import {
   FcCurrencyExchange,
 } from "react-icons/fc";
 import ItemCount from "./ItemCount";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const ProductDetail = ({ item }) => {
+  const { addToCart } = useContext(CartContext); // se accede a la funcion global
   const onAdd = (qty) => {
     alert("Añadiste un total de " + qty + " productos.");
+    // Aqui ejecutamos la funcion global anteriormente creada
+    addToCart(item);
   };
 
   return (

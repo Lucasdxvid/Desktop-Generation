@@ -46,9 +46,7 @@ function NavCustom() {
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
-            <Nav.Link href="#" className="navCartDiv">
-              <CartWidget />
-            </Nav.Link>
+            <CartWidget className="navCartDiv nav-link" />
             <Form.Control
               type="search"
               placeholder="Search"

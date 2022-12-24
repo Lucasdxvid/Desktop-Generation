@@ -10,8 +10,13 @@ const CartContextProvider = ({ children }) => {
     setCartList([...cartList, item]); // con esto le decimos que coloque los elementos que ya tiene en carro, agregue el nuevo item y convierta eso en el nuevo estado
   };
 
+  const deleteProduct = (id) => {
+    const withoutProduct = cartList.filter((item) => item.id !== id);
+    setCartList(withoutProduct);
+  };
+
   return (
-    <CartContext.Provider value={{ cartList, addToCart }}>
+    <CartContext.Provider value={{ cartList, addToCart, deleteProduct }}>
       {children}
     </CartContext.Provider>
   );

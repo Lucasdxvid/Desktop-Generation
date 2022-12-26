@@ -7,8 +7,8 @@ const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]); // El mismo arranca siendo un estado local para luego promoverlo a un estado global (value = cartList)
 
   const addToCart = (item, qty) => {
-    let found = cartList.find((product) => product.id === item.id);
-    if (found === undefined) {
+    let searchExistent = cartList.find((product) => product.id === item.id);
+    if (searchExistent === undefined) {
       setCartList([
         ...cartList,
         {
@@ -21,7 +21,7 @@ const CartContextProvider = ({ children }) => {
       ]);
     } else {
       //al encontrarlo, entonces aumentamos el qty de ese producto
-      found.qty += qty;
+      searchExistent.qty += qty;
       setCartList([...cartList]);
     }
   };
@@ -59,7 +59,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const calcTotal = () => {
-    return calcSubTotal();
+    return calcSubTotal() * 1.21;
   };
 
   return (

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 
 const CartWidget = () => {
-  const test = useContext(CartContext);
+  const myContext = useContext(CartContext);
   return (
     <>
       <Link to={`/cart`}>
         <div>
           <BsCart3 className="navCartIcon" />
-          <div className="qty-display">{test.calcItemsQty()}</div>
+          <div className="qty-display">{myContext.calcItemsQty()}</div>
         </div>
       </Link>
     </>

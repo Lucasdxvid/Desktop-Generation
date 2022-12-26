@@ -14,7 +14,8 @@ const Product = ({ id, title, price, stock, thumbnail, description }) => {
           <div className="productContent">
             <h3 className="productTitle">{title}</h3>
             <p className="productPrice">
-              <span className="priceTag">Precio: </span> $ {price}
+              <span className="priceTag">Precio: </span>
+              <span className="detailPriceSimbol"> $</span> {price}
             </p>
           </div>
           <Link to={`/productDetail/${id}`}>

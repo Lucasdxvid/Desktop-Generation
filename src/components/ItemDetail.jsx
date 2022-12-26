@@ -40,7 +40,7 @@ const ProductDetail = ({ item }) => {
                   <p className="detailContentText">
                     <FcMoneyTransfer className="shopIcon" />{" "}
                     <span className="detailContentSpan">Precio Contado: </span>{" "}
-                    <span className="detailPriceSimbol">$</span>
+                    <span className="detailPriceSimbol"> $</span>
                     {item.price}
                   </p>
                 </div>
@@ -48,7 +48,7 @@ const ProductDetail = ({ item }) => {
                   <p className="detailContentText">
                     <FcCurrencyExchange className="shopIcon" />{" "}
                     <span className="detailContentSpan">Precio de Lista:</span>{" "}
-                    <span className="detailPriceSimbol">$</span>
+                    <span className="detailPriceSimbol"> $</span>
                     {item.priceList}
                   </p>
                 </div>

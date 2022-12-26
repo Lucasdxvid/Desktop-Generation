@@ -19,9 +19,21 @@ const Cart = () => {
                 <div className="cartProdTitleContainer">
                   <h2 className="cartProductTitle">{item.title}</h2>
                   <div className="productsCartSecondContainer">
-                    <p>cantidad: {item.qty}</p>
-                    <p>precio c/u: ${item.price}</p>
-                    <p>precio total: ${calcTotalPerItem(item.id)}</p>
+                    <p>
+                      <span className="detailContentSpan">Cantidad:</span>{" "}
+                      {item.qty}
+                    </p>
+                    <p>
+                      <span className="detailContentSpan">Precio C/U:</span>
+                      <span className="detailPriceSimbol"> $</span>
+                      {item.price}
+                    </p>
+                    <p>
+                      {" "}
+                      <span className="detailContentSpan">Precio Total:</span>
+                      <span className="detailPriceSimbol"> $</span>
+                      {calcTotalPerItem(item.id)}
+                    </p>
                     <button
                       onClick={() => deleteProduct(item.id)}
                       className="btn productViewBtn"
@@ -41,9 +53,25 @@ const Cart = () => {
             <div className="orderCard card">
               <h3 className="h3order">Orden de productos:</h3>
               <div className="cartTotalDiv">
-                <p>Subtotal: ${myContext.calcSubTotal()}</p>
-                <p>IVA (21%): ${myContext.calcTaxes()}</p>
-                <p>Total: ${myContext.calcTotal()}</p>
+                <p>
+                  {" "}
+                  <span className="detailContentSpan">Subtotal:</span>
+                  <span className="detailPriceSimbol"> $</span>
+                  {myContext.calcSubTotal()}
+                </p>
+                <p>
+                  {" "}
+                  <span className="detailContentSpan">IVA</span>(21%){" "}
+                  <span className="detailContentSpan">:</span>
+                  <span className="detailPriceSimbol"> $</span>
+                  {myContext.calcTaxes()}
+                </p>
+                <p>
+                  {" "}
+                  <span className="detailContentSpan">Total:</span>
+                  <span className="detailPriceSimbol"> $</span>
+                  {myContext.calcTotal()}
+                </p>
               </div>
               <div className="buttonsDiv">
                 <button className="btn productViewBtn removeAllBtn">

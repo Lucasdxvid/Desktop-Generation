@@ -12,13 +12,13 @@ const Cart = () => {
     calcTotal,
   } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
 
+  const myContext = useContext(CartContext);
+
   return (
     <>
       <section className="cartMainContainer">
         {cartList.length === 0 ? (
-          <section className="cartMainContainer">
-            <p>tu carrito esta vacio </p>
-          </section>
+          <p>tu carrito esta vacio </p>
         ) : (
           cartList.map((item) => (
             <div className="productsCartContainer" key={item.id}>
@@ -29,20 +29,22 @@ const Cart = () => {
                   <p>cantidad: {item.qty}</p>
                   <p>precio c/u: ${item.price}</p>
                   <p>precio total: ${calcTotalPerItem(item.id)}</p>
-                  <button onClick={() => deleteProduct(item.id)} className="btn productViewBtn">
+                  <button
+                    onClick={() => deleteProduct(item.id)}
+                    className="btn productViewBtn"
+                  >
                     Eliminar
                   </button>
                 </div>
               </div>
-              {/* 
-              <button onClick={() => removeList(item)}>Todo</button> */}
-
+              {/* <button onClick={() => removeList(item)}>Todo</button> */}
               {/* <p>subtotal: {calcSubTotal(item.id)}</p>
                 <p>iva: {calcTaxes(item.id)}</p>
                 <p>total de todo: {calcTotal(item.price)}</p>  */}
             </div>
           ))
         )}
+        <button onClick={myContext.removeList}>Todo</button>
       </section>
     </>
   );

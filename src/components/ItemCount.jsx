@@ -29,7 +29,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
           +
         </button>
       </div>
-      {stock ? (
+      {stock && count ? (
         <button onClick={() => onAdd(count)} className="btn productViewBtn addToCartBtn">Add to Cart</button>
       ) : (
         <button className="btn productViewBtn addToCartBtn" disabled>Add to Cart</button>

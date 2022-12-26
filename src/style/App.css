@@ -340,3 +340,29 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+/* cartContainer */
+
+.cartMainContainer {
+  display: flex;
+  margin-bottom: 2%;
+  flex-direction: column;
+  align-items: center;
+}
+.productsCartContainer {
+  background-color: #1a1919;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1%;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 11px 4px #202020;
+}
+
+.cartProductImg {
+  width: 5em;
+  height: 6em;
+}

@@ -22,14 +22,21 @@ const Cart = () => {
         ) : (
           cartList.map((item) => (
             <div className="productsCartContainer" key={item.id}>
-              <img src={item.thumbnail} alt="" className="cartProductImg"/>
-              <div className="productCartSecondContainer">
-                <h2>{item.title}</h2>
-                <p>cantidad: {item.qty}</p>
+              <img src={item.thumbnail} alt="" className="cartProductImg" />
+              <div className="cartProdTitleContainer">
+                <h2 className="cartProductTitle">{item.title}</h2>
+                <div className="productsCartSecondContainer">
+                  <p>cantidad: {item.qty}</p>
+                  <p>precio c/u: ${item.price}</p>
+                  <p>precio total: ${calcTotalPerItem(item.id)}</p>
+                  <button onClick={() => deleteProduct(item.id)}>
+                    Eliminar
+                  </button>
+                </div>
               </div>
-              <button onClick={() => deleteProduct(item.id)}>Eliminar</button>
-              <button onClick={() => removeList(item)}>Todo</button>
-              <p>subtotal producto: {calcTotalPerItem(item.id)}</p>
+              {/* 
+              <button onClick={() => removeList(item)}>Todo</button> */}
+
               {/* <p>subtotal: {calcSubTotal(item.id)}</p>
                 <p>iva: {calcTaxes(item.id)}</p>
                 <p>total de todo: {calcTotal(item.price)}</p>  */}

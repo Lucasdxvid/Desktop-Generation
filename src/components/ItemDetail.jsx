@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 
 const ProductDetail = ({ item }) => {
   const [itemCount, setItemCount] = useState(0);
@@ -99,7 +100,9 @@ const ProductDetail = ({ item }) => {
           </article>
         </section>
       ) : (
-        <p>cargando...</p>
+        <section className="spinnerMainContainer">
+          <Spinner animation="border" size="sm" />
+        </section>
       )}
     </>
   );

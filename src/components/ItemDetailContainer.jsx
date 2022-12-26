@@ -9,15 +9,15 @@ const ItemDetailContainer = () => {
   const { idProduct } = useParams();
 
   useEffect(() => {
-    fetchData(2000, ProductsData.find(item => item.id === parseInt(idProduct)))
-          .then(result => setDato(result))
-          .catch(err => console.log(err))
+    fetchData(
+      2000,
+      ProductsData.find((item) => item.id === parseInt(idProduct))
+    )
+      .then((result) => setDato(result))
+      .catch((err) => console.log(err));
   }, []);
-  
-  return (
-      <ProductDetail item={dato} />
-  );
-}
 
+  return <ProductDetail item={dato} />;
+};
 
 export default ItemDetailContainer;

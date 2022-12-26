@@ -373,7 +373,7 @@ body {
   height: 6em;
   border-radius: 10px;
   padding: 1%;
-  border: solid green 1px;
+  border: solid #00fd2a 1px;
 }
 
 .cartProdTitleContainer {
@@ -436,4 +436,22 @@ body {
 
 .removeAllBtn:hover {
   scale: 1.03;
+}
+
+/* Spiner */
+
+.spinnerMainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.spinner-border-sm {
+  --bs-spinner-width: 20em;
+  --bs-spinner-height: 20em;
+  --bs-spinner-border-width: 0.5em;
+  color: #00fd2a;
 }

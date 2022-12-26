@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProductsData } from "../utils/ProductsData";
 import fetchData from "../utils/FetchData";
 import Product from "./ItemList";
+import Spinner from "react-bootstrap/Spinner";
 
 const ItemListContainer = () => {
   //Aqui tenemos el estado datos del componente "ProductsData" que lo seteamos con el resultado de la promesa ("el array de productos llamado data")
@@ -40,7 +41,9 @@ const ItemListContainer = () => {
           />
         ))
       ) : (
-        <p>cargando...</p>
+        <section className="spinnerMainContainer">
+          <Spinner animation="border" size="sm" />
+        </section>
       )}
     </>
   );

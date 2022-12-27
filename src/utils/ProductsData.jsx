@@ -6,7 +6,7 @@ export const ProductsData = [
   {
     id: 1,
     categoryId: 2,
-    title: "Mouse Logitech G903 HERO LIGHTSPEED Inalambrico",
+    title: "Mouse Logitech G903 HERO LIGHTSPEED Inalámbrico",
     stock: 5,
     price: 21500,
     priceList: 26875,

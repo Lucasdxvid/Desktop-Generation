@@ -1,10 +1,45 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { serverTimestamp } from "firebase/firestore";
+import { doc, setDoc, collection } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 
 const Cart = () => {
   const { cartList, deleteProduct, calcTotalPerItem } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
 
   const myContext = useContext(CartContext);
+
+  const createOrder = () => {
+    const order = {
+      buyer: {
+        username: "anonymous",
+        email: "generic_mail@gmail.com",
+        phone: "+54 9 381 341 444",
+      },
+      date: serverTimestamp(), //Esta es una funcion de fireStore que nos permite obtener la fecha y hora exacta al clickear
+      item: myContext.cartList.map((item) => ({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        qty: item.qty,
+      })),
+      total: myContext.calcTotal(),
+    };
+    console.log(order);
+    const crtOrderFireStore = async () => {
+      const newOrderRef = doc(collection(db, "orders")); // aca le decimos que de esta orders db me cree nuevos datos con su id generada
+      await setDoc(newOrderRef, order);
+      return newOrderRef;
+    };
+
+    crtOrderFireStore()
+      .then((result) => {
+        alert("order creada: " + result.id);
+        // Borramos todos los productos luego de una compra exitosa
+        myContext.removeList();
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
@@ -74,7 +109,10 @@ const Cart = () => {
                 </p>
               </div>
               <div className="buttonsDiv">
-                <button className="btn productViewBtn removeAllBtn">
+                <button
+                  className="btn productViewBtn removeAllBtn"
+                  onClick={createOrder}
+                >
                   Comprar
                 </button>
                 <button

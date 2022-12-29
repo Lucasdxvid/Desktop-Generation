@@ -1,7 +1,13 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { serverTimestamp } from "firebase/firestore";
-import { doc, setDoc, collection } from "firebase/firestore";
+import {
+  doc,
+  setDoc,
+  collection,
+  updateDoc,
+  increment,
+} from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
 
 const Cart = () => {
@@ -35,7 +41,14 @@ const Cart = () => {
     crtOrderFireStore()
       .then((result) => {
         alert("order creada: " + result.id);
-        // Borramos todos los productos luego de una compra exitosa
+        myContext.cartList.forEach(async (item) => {
+          const itemRef = doc(db, "products", item.id);
+
+          await updateDoc(itemRef, {
+            stock: increment(-item.qty), // el - evita que sume (resta)
+          });
+        });
+        // Borramos todos los productos luego de una compra exitosa y actualizamos el stock
         myContext.removeList();
       })
       .catch((error) => console.log(error));

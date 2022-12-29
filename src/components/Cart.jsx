@@ -54,6 +54,10 @@ const Cart = () => {
       .catch((error) => console.log(error));
   };
 
+  const formatMoney = (num) => {
+    return " " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  };
+
   return (
     <>
       <main className="cartMainContainer">
@@ -72,15 +76,15 @@ const Cart = () => {
                       {item.qty}
                     </p>
                     <p>
-                      <span className="detailContentSpan">Precio C/U:</span>
-                      <span className="detailPriceSimbol"> $</span>
-                      {item.price}
+                      <span className="detailContentSpan">Precio C/U: </span>
+                      <span className="detailPriceSimbol">$</span>
+                      {formatMoney(item.price)}
                     </p>
                     <p>
                       {" "}
-                      <span className="detailContentSpan">Precio Total:</span>
-                      <span className="detailPriceSimbol"> $</span>
-                      {calcTotalPerItem(item.id)}
+                      <span className="detailContentSpan">Precio Total: </span>
+                      <span className="detailPriceSimbol">$</span>
+                      {formatMoney(calcTotalPerItem(item.id))}
                     </p>
                     <button
                       onClick={() => deleteProduct(item.id)}
@@ -105,20 +109,20 @@ const Cart = () => {
                   {" "}
                   <span className="detailContentSpan">Subtotal:</span>
                   <span className="detailPriceSimbol"> $</span>
-                  {myContext.calcSubTotal()}
+                  {formatMoney(myContext.calcSubTotal())}
                 </p>
                 <p>
                   {" "}
                   <span className="detailContentSpan">IVA</span>(21%){" "}
-                  <span className="detailContentSpan">:</span>
-                  <span className="detailPriceSimbol"> $</span>
-                  {myContext.calcTaxes()}
+                  <span className="detailContentSpan">: </span>
+                  <span className="detailPriceSimbol">$</span>
+                  {formatMoney(myContext.calcTaxes())}
                 </p>
                 <p>
                   {" "}
-                  <span className="detailContentSpan">Total:</span>
-                  <span className="detailPriceSimbol"> $</span>
-                  {myContext.calcTotal()}
+                  <span className="detailContentSpan">Total: </span>
+                  <span className="detailPriceSimbol">$</span>
+                  {formatMoney(myContext.calcTotal())}
                 </p>
               </div>
               <div className="buttonsDiv">

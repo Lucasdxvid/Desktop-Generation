@@ -22,6 +22,9 @@ const ProductDetail = ({ item }) => {
     // Aqui ejecutamos la funcion global anteriormente creada
     addToCart(item, qty);
   };
+  const formatMoney = (num) => {
+    return " " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  };
 
   return (
     <>
@@ -40,16 +43,16 @@ const ProductDetail = ({ item }) => {
                   <p className="detailContentText">
                     <FcMoneyTransfer className="shopIcon" />{" "}
                     <span className="detailContentSpan">Precio Contado: </span>{" "}
-                    <span className="detailPriceSimbol"> $</span>
-                    {item.price}
+                    <span className="detailPriceSimbol">$</span>
+                    {formatMoney(item.price)}
                   </p>
                 </div>
                 <div className="detailTextDiv">
                   <p className="detailContentText">
                     <FcCurrencyExchange className="shopIcon" />{" "}
                     <span className="detailContentSpan">Precio de Lista:</span>{" "}
-                    <span className="detailPriceSimbol"> $</span>
-                    {item.priceList}
+                    <span className="detailPriceSimbol">$</span>
+                    {formatMoney(item.priceList)}
                   </p>
                 </div>
                 <div className="detailTextDiv">

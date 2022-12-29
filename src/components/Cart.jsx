@@ -86,35 +86,33 @@ const Cart = () => {
             <p>tu carrito esta vacio </p>
           ) : (
             cartList.map((item) => (
-              <div className="productsCartContainer" key={item.id}>
+              <article className="productsCartContainer" key={item.id}>
                 <img src={item.thumbnail} alt="" className="cartProductImg" />
                 <div className="cartProdTitleContainer">
                   <h2 className="cartProductTitle">{item.title}</h2>
-                  <div className="productsCartSecondContainer">
-                    <p>
-                      <span className="detailContentSpan">Cantidad:</span>{" "}
-                      {item.qty}
-                    </p>
-                    <p>
-                      <span className="detailContentSpan">Precio C/U: </span>
-                      <span className="detailPriceSimbol">$</span>
-                      {formatMoney(item.price)}
-                    </p>
-                    <p>
-                      {" "}
-                      <span className="detailContentSpan">Precio Total: </span>
-                      <span className="detailPriceSimbol">$</span>
-                      {formatMoney(calcTotalPerProducts(item.id))}
-                    </p>
-                    <button
-                      onClick={() => deleteOneProduct(item.id)}
-                      className="btn productViewBtn"
-                    >
-                      Eliminar
-                    </button>
-                  </div>
                 </div>
-              </div>
+                <p>
+                  <span className="detailContentSpan">Cantidad:</span>{" "}
+                  {item.qty}
+                </p>
+                <p>
+                  <span className="detailContentSpan">Precio C/U: </span>
+                  <span className="detailPriceSimbol">$</span>
+                  {formatMoney(item.price)}
+                </p>
+                <p>
+                  {" "}
+                  <span className="detailContentSpan">Precio Total: </span>
+                  <span className="detailPriceSimbol">$</span>
+                  {formatMoney(calcTotalPerProducts(item.id))}
+                </p>
+                <button
+                  onClick={() => deleteOneProduct(item.id)}
+                  className="btn productViewBtn cartProdBtn"
+                >
+                  Eliminar
+                </button>
+              </article>
             ))
           )}
         </section>

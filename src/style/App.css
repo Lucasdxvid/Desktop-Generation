@@ -565,3 +565,43 @@ body {
   background-color: rgb(26, 25, 25);
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
+
+.emptyCartDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
+}
+
+.emptyCartIcon {
+  width: 45vh;
+  height: 75vh;
+  text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
+}
+
+.emptyCartText {
+  font-size: 5em;
+}
+
+.emptyCartSpan {
+  color: rgb(245, 65, 65);
+}
+
+@media (min-width: 1px) and (max-width: 720px) {
+  .emptyCartText {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 580px) {
+  .emptyCartIcon {
+    width: 45vw;
+    height: 75vw;
+    text-shadow: -3px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000;
+  }
+
+  .emptyCartText {
+    font-size: 10vw;
+  }
+}

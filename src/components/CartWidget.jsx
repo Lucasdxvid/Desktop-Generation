@@ -10,7 +10,7 @@ const CartWidget = () => {
       <Link to={`/cart`}>
         <div>
           <BsCart3 className="navCartIcon" />
-          <div className="qty-display">{myContext.calcItemsQty()}</div>
+          <div className="qty-display">{myContext.calcProductsPerQty()}</div>
         </div>
       </Link>
     </>

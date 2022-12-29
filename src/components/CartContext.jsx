@@ -25,16 +25,16 @@ const CartContextProvider = ({ children }) => {
       setCartList([...cartList]);
     }
   };
-  const deleteProduct = (id) => {
+  const deleteOneProduct = (id) => {
     const withoutProduct = cartList.filter((item) => item.id !== id);
     setCartList(withoutProduct);
   };
 
-  const removeList = () => {
+  const clearCart = () => {
     setCartList([]);
   };
 
-  const calcItemsQty = () => {
+  const calcProductsPerQty = () => {
     let qtys = cartList.map((item) => item.qty);
     return qtys.reduce(
       (previousValue, currentValue) => previousValue + currentValue,
@@ -42,13 +42,13 @@ const CartContextProvider = ({ children }) => {
     );
   };
 
-  const calcTotalPerItem = (id) => {
+  const calcTotalPerProducts = (id) => {
     let index = cartList.map((item) => item.id).indexOf(id);
     return cartList[index].price * cartList[index].qty;
   };
 
   const calcSubTotal = () => {
-    let totalPerItem = cartList.map((item) => calcTotalPerItem(item.id));
+    let totalPerItem = cartList.map((item) => calcTotalPerProducts(item.id));
     return totalPerItem.reduce(
       (previousValue, currentValue) => previousValue + currentValue
     );
@@ -67,10 +67,10 @@ const CartContextProvider = ({ children }) => {
       value={{
         cartList,
         addToCart,
-        deleteProduct,
-        removeList,
-        calcItemsQty,
-        calcTotalPerItem,
+        deleteOneProduct,
+        clearCart,
+        calcProductsPerQty,
+        calcTotalPerProducts,
         calcSubTotal,
         calcTaxes,
         calcTotal,

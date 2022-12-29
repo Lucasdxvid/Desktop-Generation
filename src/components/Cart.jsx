@@ -12,7 +12,8 @@ import { db } from "../utils/firebaseConfig";
 import Swal from "sweetalert2";
 
 const Cart = () => {
-  const { cartList, deleteProduct, calcTotalPerItem } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
+  const { cartList, deleteOneProduct, calcTotalPerProducts } =
+    useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
 
   const myContext = useContext(CartContext);
 
@@ -66,7 +67,7 @@ const Cart = () => {
               });
             });
             // Borramos todos los productos luego de una compra exitosa y actualizamos el stock
-            myContext.removeList();
+            myContext.clearCart();
           })
           .catch((error) => console.log(error));
       }
@@ -103,10 +104,10 @@ const Cart = () => {
                       {" "}
                       <span className="detailContentSpan">Precio Total: </span>
                       <span className="detailPriceSimbol">$</span>
-                      {formatMoney(calcTotalPerItem(item.id))}
+                      {formatMoney(calcTotalPerProducts(item.id))}
                     </p>
                     <button
-                      onClick={() => deleteProduct(item.id)}
+                      onClick={() => deleteOneProduct(item.id)}
                       className="btn productViewBtn"
                     >
                       Eliminar
@@ -152,7 +153,7 @@ const Cart = () => {
                   Comprar
                 </button>
                 <button
-                  onClick={myContext.removeList}
+                  onClick={myContext.clearCart}
                   className="btn productViewBtn removeAllBtn"
                 >
                   Borrar todo

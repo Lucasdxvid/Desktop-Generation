@@ -9,6 +9,7 @@ import {
   increment,
 } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { cartList, deleteProduct, calcTotalPerItem } = useContext(CartContext); //En su parametro, el hook recibira el contexto a utilizar
@@ -16,42 +17,60 @@ const Cart = () => {
   const myContext = useContext(CartContext);
 
   const createOrder = () => {
-    const order = {
-      buyer: {
-        username: "anonymous",
-        email: "generic_mail@gmail.com",
-        phone: "+54 9 381 341 444",
-      },
-      date: serverTimestamp(), //Esta es una funcion de fireStore que nos permite obtener la fecha y hora exacta al clickear
-      item: myContext.cartList.map((item) => ({
-        id: item.id,
-        title: item.title,
-        price: item.price,
-        qty: item.qty,
-      })),
-      total: myContext.calcTotal(),
-    };
-    console.log(order);
-    const crtOrderFireStore = async () => {
-      const newOrderRef = doc(collection(db, "orders")); // aca le decimos que de esta orders db me cree nuevos datos con su id generada
-      await setDoc(newOrderRef, order);
-      return newOrderRef;
-    };
+    Swal.fire({
+      customClass: "hola",
+      title: "¿Todo listo?",
+      text: "Recuerda que puedes cancelar tu compra en cualquier momento",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Si, comprar",
+      cancelButtonText: "No, espera",
+      color: "white",
+      background: "#1a1919",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const order = {
+          buyer: {
+            username: "anonymous",
+            email: "generic_mail@gmail.com",
+            phone: "+54 9 381 341 444",
+          },
+          date: serverTimestamp(), //Esta es una funcion de fireStore que nos permite obtener la fecha y hora exacta al clickear
+          item: myContext.cartList.map((item) => ({
+            id: item.id,
+            title: item.title,
+            price: item.price,
+            qty: item.qty,
+          })),
+          total: myContext.calcTotal(),
+        };
+        console.log(order);
+        const crtOrderFireStore = async () => {
+          const newOrderRef = doc(collection(db, "orders")); // aca le decimos que de esta orders db me cree nuevos datos con su id generada
+          await setDoc(newOrderRef, order);
+          return newOrderRef;
+        };
 
-    crtOrderFireStore()
-      .then((result) => {
-        alert("order creada: " + result.id);
-        myContext.cartList.forEach(async (item) => {
-          const itemRef = doc(db, "products", item.id);
+        crtOrderFireStore()
+          .then((result) => {
+            Swal.fire(
+              "¡Gracias!",
+              "Tu orden de compra: " + result.id + " fue creada con exito",
+              "success"
+            );
+            myContext.cartList.forEach(async (item) => {
+              const itemRef = doc(db, "products", item.id);
 
-          await updateDoc(itemRef, {
-            stock: increment(-item.qty), // el - evita que sume (resta)
-          });
-        });
-        // Borramos todos los productos luego de una compra exitosa y actualizamos el stock
-        myContext.removeList();
-      })
-      .catch((error) => console.log(error));
+              await updateDoc(itemRef, {
+                stock: increment(-item.qty), // el - evita que sume (resta)
+              });
+            });
+            // Borramos todos los productos luego de una compra exitosa y actualizamos el stock
+            myContext.removeList();
+          })
+          .catch((error) => console.log(error));
+      }
+    });
   };
 
   const formatMoney = (num) => {

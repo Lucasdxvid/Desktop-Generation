@@ -34,11 +34,11 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
           onClick={() => onAdd(count)}
           className="btn productViewBtn addToCartBtn"
         >
-          Add to Cart
+          Añadir al carro
         </button>
       ) : (
         <button className="btn productViewBtn addToCartBtn" disabled>
-          Add to Cart
+          -
         </button>
       )}
     </>

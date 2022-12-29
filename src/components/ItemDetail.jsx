@@ -12,24 +12,41 @@ import { CartContext } from "./CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetail = ({ item }) => {
   const [itemCount, setItemCount] = useState(0);
   const { addToCart } = useContext(CartContext); // se accede a la funcion global
   const onAdd = (qty) => {
-    alert("Añadiste un total de " + qty + " productos.");
+    // notificamos al usuario la cantidad de productos agregados;
+    notify(qty);
     setItemCount(qty);
     // Aqui ejecutamos la funcion global anteriormente creada
     addToCart(item, qty);
   };
+
   const formatMoney = (num) => {
     return " " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   };
+  const notify = (x) => toast("Añadiste un total de " + x + " producto/s.");
 
   return (
     <>
       {item && item.thumbnail ? (
         <section className="detailMainContainer">
+          <ToastContainer
+            position="top-right"
+            autoClose={1000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
           <article className="detailCard">
             <h2 className="detailTitle">{item.title}</h2>
             <div className="detailContent">

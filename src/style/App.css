@@ -480,6 +480,7 @@ body {
 
 .swal2-styled.swal2-cancel {
   background: linear-gradient(60deg, #fd0000 0%, #610707 100%) !important;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 .swal2-modal {
@@ -494,4 +495,10 @@ body {
 .swal2-icon.swal2-warning {
   border-color: #00fd2a;
   color: #00fd2a;
+}
+
+.Toastify__toast {
+  color: white;
+  background-color: rgb(26, 25, 25);
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }

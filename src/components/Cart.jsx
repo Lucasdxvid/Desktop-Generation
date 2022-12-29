@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
 import Swal from "sweetalert2";
+import { BsFillCartXFill } from "react-icons/bs";
 
 const Cart = () => {
   const { cartList, deleteOneProduct, calcTotalPerProducts } =
@@ -83,7 +84,10 @@ const Cart = () => {
       <main className="cartMainContainer">
         <section className="prodCartSection">
           {cartList.length === 0 ? (
-            <p>tu carrito esta vacio </p>
+            <div className="emptyCartDiv">
+              <BsFillCartXFill className="emptyCartIcon" />
+              <p className="emptyCartText">Tu carrito esta <span className="emptyCartSpan">vacío</span></p>
+            </div>
           ) : (
             cartList.map((item) => (
               <article className="productsCartContainer" key={item.id}>
@@ -117,7 +121,7 @@ const Cart = () => {
           )}
         </section>
         {cartList.length === 0 ? (
-          <p>tu carrito esta vacio </p>
+          <p></p>
         ) : (
           <section className="orderCartSection">
             <div className="orderCard card">

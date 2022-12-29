@@ -272,6 +272,12 @@ body {
   }
 }
 
+@media (min-width: 1px) and (max-width: 480px) {
+  .navLogo {
+    width: 13em;
+  }
+}
+
 .detailTitle {
   color: white;
   font-weight: 900;

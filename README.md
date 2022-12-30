@@ -2,6 +2,8 @@
 
 E-Commerce del mundo del PC Gamer dedicado a la venta de hardware.
 
+Preview del sitio: https://desktop-generation.netlify.app/
+
 FRAMEWORKS/LIBRERIAS/OTROS:
 
 :small_blue_diamond: React-Js
@@ -16,6 +18,8 @@ FRAMEWORKS/LIBRERIAS/OTROS:
 
 :small_orange_diamond: React Inner Image Zoom
 
-En progreso...
+:small_blue_diamond: Toastify
 
-![gifPrueba](https://user-images.githubusercontent.com/107517262/206062954-bba5db1b-8efb-443c-98ce-361dc3fcb33b.gif)
+:small_orange_diamond: SweetAlert2
+
+:small_blue_diamond: FireStore

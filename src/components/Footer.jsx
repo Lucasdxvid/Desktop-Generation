@@ -76,10 +76,7 @@ function FooterCustom() {
         </div>
 
         <div className="text-center p-3">
-          © 2022 Copyright:
-          <a className="text-white" href="index.html">
-            Desktop-Generation.com
-          </a>
+          © 2022 Copyright: Desktop-Generation.com
         </div>
       </footer>
     </>

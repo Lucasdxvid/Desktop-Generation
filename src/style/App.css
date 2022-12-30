@@ -9,6 +9,21 @@ a {
   text-decoration: none;
 }
 
+@keyframes reload {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+#root {
+  animation-name: reload;
+  animation-duration: 1s;
+}
+
 /* Header - Nav */
 
 .navbar,

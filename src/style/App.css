@@ -605,3 +605,14 @@ body {
     font-size: 10vw;
   }
 }
+
+/* Footer */
+
+.myFooter {
+  margin-top: 2%;
+  background-color: rgb(26, 25, 25);
+}
+
+.btn-outline-light:hover {
+  background-color: #00fd2a;
+}

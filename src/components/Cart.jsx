@@ -82,16 +82,25 @@ const Cart = () => {
   return (
     <>
       <main className="cartMainContainer">
+        <div
+          className="cartImg"
+        />
         <section className="prodCartSection">
           {cartList.length === 0 ? (
             <div className="emptyCartDiv">
               <BsFillCartXFill className="emptyCartIcon" />
-              <p className="emptyCartText">Tu carrito esta <span className="emptyCartSpan">vacío</span></p>
+              <p className="emptyCartText">
+                Tu carrito esta <span className="emptyCartSpan">vacío</span>
+              </p>
             </div>
           ) : (
             cartList.map((item) => (
               <article className="productsCartContainer" key={item.id}>
-                <img src={item.thumbnail} alt="" className="cartProductImg" />
+                <img
+                  src={item.thumbnail}
+                  alt="imagen del producto"
+                  className="cartProductImg"
+                />
                 <div className="cartProdTitleContainer">
                   <h2 className="cartProductTitle">{item.title}</h2>
                 </div>

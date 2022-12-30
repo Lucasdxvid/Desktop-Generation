@@ -714,13 +714,13 @@ body {
     flex-direction: row;
     width: 90%;
     margin-bottom: 2%;
-}
+  }
 
-.noticiasCatLab {
+  .noticiasCatLab {
     margin-left: 1%;
     line-height: 300%;
     font-size: 1em;
-}
+  }
 }
 
 @media (min-width: 1px) and (max-width: 670px) {
@@ -730,10 +730,25 @@ body {
     width: 100%;
     padding: 0;
     margin-bottom: 10%;
+  }
+
+  .noticiasCatLi {
+    border: 1px solid green;
+  }
 }
 
-.noticiasCatLi {
-  border: 1px solid green;
-}
+.cartImg {
+  width: 100%;
+  height: 15em;
+  background-image: url(https://res.cloudinary.com/drsheqkfv/image/upload/v1672420110/Desktop%20Generation/carrusel/img1_cxcycl.webp);
+  background-position: 1%;
+  transition: 1s;
+  border-bottom: 2px solid #00fd2a;
+  background-position-y: 10%;
 }
 
+.cartImg:hover {
+  background-position: 80%;
+  background-position-y: 30%;
+  transition: 1s;
+}

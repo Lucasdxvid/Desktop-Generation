@@ -663,6 +663,7 @@ body {
 
 .carouselImg {
   border: 2px solid #00fd2a;
+  border-radius: 8px;
 }
 
 @media (min-width: 1px) and (max-width: 1000px) {
@@ -677,5 +678,62 @@ body {
   }
 }
 
+/* Categories */
 
+.noticiasCatUl {
+  background-color: rgb(26, 25, 25);
+  display: flex;
+  width: 50%;
+  margin: 2% 0 1% 0;
+  border-radius: 8px;
+  align-content: center;
+  justify-content: space-evenly;
+  list-style: none;
+  border: 2px solid #00fd2a;
+  padding: 0;
+}
+
+.noticiasCatLi {
+  color: #fff;
+}
+
+.noticiasCatLi:hover {
+  color: #00fd2a;
+  font-size: 900;
+}
+
+.noticiasCatLab {
+  font-size: 1.3em;
+  font-weight: 800;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+@media (min-width: 1px) and (max-width: 1200px) {
+  .noticiasCatUl {
+    text-align: center;
+    flex-direction: row;
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+.noticiasCatLab {
+    margin-left: 1%;
+    line-height: 300%;
+    font-size: 1em;
+}
+}
+
+@media (min-width: 1px) and (max-width: 670px) {
+  .noticiasCatUl {
+    flex-direction: column;
+    border-radius: 1%;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10%;
+}
+
+.noticiasCatLi {
+  border: 1px solid green;
+}
+}
 

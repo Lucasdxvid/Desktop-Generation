@@ -616,3 +616,66 @@ body {
 .btn-outline-light:hover {
   background-color: #00fd2a;
 }
+
+/* Carrusel */
+
+.indexCarrusel {
+  width: 60%;
+  margin-top: 1%;
+}
+
+.billH3 {
+  text-shadow: -2px 0 #000, 0 3px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.billP {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.billText {
+  background-color: #00fd2a48;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 2%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 50%;
+  height: 50%;
+}
+
+.carouselIco {
+  color: #00fd2a;
+  height: 50%;
+  width: 50%;
+}
+
+.carouselSection {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carouselImg {
+  border: 2px solid #00fd2a;
+}
+
+@media (min-width: 1px) and (max-width: 1000px) {
+  .indexCarrusel {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 670px) {
+  .indexCarrusel {
+    width: 100%;
+  }
+}
+
+
+
